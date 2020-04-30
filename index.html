@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<title>PoGo GBL Lead Tracker</title>
+
+<body>
+  <div class=doctitle>Pokémon Go Battle League Lead Tracker - Documentation</div>
+  <h1>Jump To:</h1>
+  <p><a href="#great-league">Great League</a></p>
+  <p><a href="#ultra-league">Ultra League</a></p>
+  <p><a href="#master-league">Master League</a></p>
+  <div></div>
+  <h1><span class=get>GET</span>/leagues</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns a list of all Pokémon Go Battle leagues.
+  </code>
+  <h1 id="great-league"><span class=get>GET</span>/leagues/great-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/great-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns a list of all lead Pokémon players have encountered in Great League.
+  </code>
+  <h1><span class=get>GET</span>/leagues/great-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/great-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns the number of times the Pokémon with the associated slug has been encountered in Great League, and the ratings the encounters happened.
+  </code>
+  <h1><span class=post>POST</span>/leagues/great-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=post>POST</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/great-league/leads  
+    <span class=desc>Headers</span>:
+    Content-Type: application/json
+    Authorization: Bearer YOUR_API_KEY_HERE
+
+    <span class=desc>Body</span>:
+    { "name": "Charizard", "slug": "charizard", "rating": 1500 }
+
+    <span class=desc>Description</span>: Creates a new Great League lead entry from the data provided in the body.
+  </code>
+  <h1><span class=delete>DELETE</span>/leagues/great-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=delete>DELETE</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/great-league/leads/{slug}
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Deletes the Pokémon Great League lead entry associated with the provided slug.
+  </code>
+  <h1 id="ultra-league"><span class=get>GET</span>/leagues/ultra-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/ultra-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns a list of all lead Pokémon players have encountered in Ultra League.
+  </code>
+  <h1><span class=get>GET</span>/leagues/ultra-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/ultra-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns the number of times the Pokémon with the associated slug has been encountered in Ultra League, and the ratings the encounters happened.
+  </code>
+  <h1><span class=post>POST</span>/leagues/ultra-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=post>POST</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/ultra-league/leads  
+    <span class=desc>Headers</span>:
+    Content-Type: application/json
+    Authorization: Bearer YOUR_API_KEY_HERE
+
+    <span class=desc>Body</span>:
+    { "name": "Charizard", "slug": "charizard", "rating": 1500 }
+
+    <span class=desc>Description</span>: Creates a new Ultra League lead entry from the data provided in the body.
+  </code>
+  <h1><span class=delete>DELETE</span>/leagues/ultra-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=delete>DELETE</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/ultra-league/leads/{slug}
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Deletes the Pokémon Ultra League lead entry associated with the provided slug.
+  </code>
+  <h1 id="master-league"><span class=get>GET</span>/leagues/master-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/master-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns a list of all lead Pokémon players have encountered in Master League.
+  </code>
+  <h1><span class=get>GET</span>/leagues/master-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=get>GET</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/master-league/leads
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Returns the number of times the Pokémon with the associated slug has been encountered in Master League, and the ratings the encounters happened.
+  </code>
+  <h1><span class=post>POST</span>/leagues/master-league/leads</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=post>POST</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/master-league/leads  
+    <span class=desc>Headers</span>:
+    Content-Type: application/json
+    Authorization: Bearer YOUR_API_KEY_HERE
+
+    <span class=desc>Body</span>:
+    { "name": "Charizard", "slug": "charizard", "rating": 1500 }
+
+    <span class=desc>Description</span>: Creates a new Master League lead entry from the data provided in the body.
+  </code>
+  <h1><span class=delete>DELETE</span>/leagues/master-league/leads/{slug}</h1>
+  <code>
+    <span class=desc>Method</span>: <span class=delete>DELETE</span>
+    <span class=desc>Route</span>: https://placeholder.url/leagues/master-league/leads/{slug}
+    <span class=desc>Headers</span>: Authorization: Bearer YOUR_API_KEY_HERE
+    <span class=desc>Description</span>: Deletes the Pokémon Master League lead entry associated with the provided slug.
+  </code>
+</body>
+
+</html>
