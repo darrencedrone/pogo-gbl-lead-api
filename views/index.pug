@@ -19,35 +19,35 @@ html
       | : Returns a list of all Pokémon Go Battle leagues.
     h1
       span.get GET
-      | /leagues/:league/leads
+      | /leagues/:leagueSlug/leads
     code
       span.desc Method
       | : 
       span.get GET<br>
       span.desc Route
-      | : https://placeholder.url/leagues/:league/leads<br>
+      | : https://placeholder.url/leagues/:leagueSlug/leads<br>
       span.desc Description
       | : Returns a list of all lead Pokémon players have encountered in the specified league.
     h1
       span.get GET
-      | /leagues/:league/leads/{slug}
+      | /leagues/:leagueSlug/leads/{slug}
     code
       span.desc Method
       | : 
       span.get GET<br>
       span.desc Route
-      | : https://placeholder.url/leagues/:league/leads<br>
+      | : https://placeholder.url/leagues/:leagueSlug/leads<br>
       span.desc Description
       | : Returns the number of times the Pokémon with the associated slug has been encountered in the specified league, and the ratings the encounters happened.
     h1
       span.post POST
-      | /leagues/:league/leads
+      | /leagues/:leagueSlug/leads
     code
       span.desc Method
       | : 
       span.post POST<br>
       span.desc Route
-      | : https://placeholder.url/leagues/:league/leads<br>
+      | : https://placeholder.url/leagues/:leagueSlug/leads<br>
       span.desc Headers
       | : Content-Type: application/json<br>
       span.desc Body
@@ -56,12 +56,12 @@ html
       | : Creates a new lead entry in the specified league from the data provided in the body.
     h1
       span.delete DELETE
-      | /leagues/:league/leads/{slug}
+      | /leagues/:leagueSlug/leads/{slug}
     code
       span.desc Method
       | : 
       span.delete DELETE<br>
       span.desc Route
-      | : https://placeholder.url/leagues/:league/leads/{slug}<br>
+      | : https://placeholder.url/leagues/:leagueSlug/leads/{slug}<br>
       span.desc Description
       | : Deletes the Pokémon lead entry associated with the provided slug in the specified league.

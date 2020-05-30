@@ -1,7 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const { getAllLeagues } = require('./controllers/leagues')
-const { getAllLeads, getLeadEncountersBySlug } = require('./controllers/leads')
+const { getAllLeads, getLeadEncountersBySlug, saveNewEncounter } = require('./controllers/leads')
+const { deleteEncounter } = require('./controllers/encounters')
 
 const app = express()
 
@@ -14,9 +15,13 @@ app.get('/', (request, response) => {
 
 app.get('/leagues', getAllLeagues)
 
-app.get('/leagues/:leagueId/leads', getAllLeads)
+app.get('/leagues/:leagueSlug/leads', getAllLeads)
 
-app.get('/leagues/:leagueId/leads/:slug', getLeadEncountersBySlug)
+app.get('/leagues/:leagueSlug/leads/:slug', getLeadEncountersBySlug)
+
+app.post('/leagues/:leagueSlug/leads', bodyParser.json(), saveNewEncounter)
+
+app.delete('/leagues/:leagueSlug/leads/:slug/:id', deleteEncounter)
 
 app.all('*', (request, response) => {
   return response.sendStatus(404)

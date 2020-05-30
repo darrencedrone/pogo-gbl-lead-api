@@ -23,7 +23,7 @@ module.exports = {
     await queryInterface.createTable('leads', {
       slug: { type: Sequelize.STRING, allowNull: false, primaryKey: true },
       name: { type: Sequelize.STRING, allowNull: false },
-      league: { type: Sequelize.STRING, references: { model: 'leagues', key: 'slug' }, primaryKey: true },
+      leagueSlug: { type: Sequelize.STRING, references: { model: 'leagues', key: 'slug' }, primaryKey: true },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,
@@ -35,8 +35,8 @@ module.exports = {
     return queryInterface.createTable('encounters', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       rating: { type: Sequelize.INTEGER, allowNull: false },
-      leadId: { type: Sequelize.STRING, references: { model: 'leads', key: 'slug' } },
-      leagueId: { type: Sequelize.STRING, references: { model: 'leagues', key: 'slug' } },
+      leadSlug: { type: Sequelize.STRING, references: { model: 'leads', key: 'slug' } },
+      leagueSlug: { type: Sequelize.STRING, references: { model: 'leagues', key: 'slug' } },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,

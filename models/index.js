@@ -15,14 +15,14 @@ const Leagues = LeaguesModel(connection, Sequelize)
 const Leads = LeadsModel(connection, Sequelize)
 const Encounters = EncountersModel(connection, Sequelize, Leads, Leagues)
 
-Leads.hasMany(Encounters)
-Encounters.belongsTo(Leads)
+Leads.hasMany(Encounters, { foreignKey: 'leadSlug' })
+Encounters.belongsTo(Leads, { foreignKey: 'leadSlug' })
 
-Leagues.hasMany(Leads)
-Leads.belongsTo(Leagues)
+Leagues.hasMany(Leads, { foreignKey: 'leagueSlug' })
+Leads.belongsTo(Leagues, { foreignKey: 'leagueSlug' })
 
-Leagues.hasMany(Encounters)
-Encounters.belongsTo(Leagues)
+Leagues.hasMany(Encounters, { foreignKey: 'leagueSlug' })
+Encounters.belongsTo(Leagues, { foreignKey: 'leagueSlug' })
 
 module.exports = {
   Leagues,
