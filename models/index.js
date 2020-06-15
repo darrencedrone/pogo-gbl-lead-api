@@ -1,8 +1,8 @@
-const Sequelize = require('sequelize')
-const allConfigs = require('../configs/sequelize')
-const LeaguesModel = require('./leagues')
-const LeadsModel = require('./leads')
-const EncountersModel = require('./encounters')
+import Sequelize from 'sequelize'
+import allConfigs from '../configs/sequelize'
+import LeaguesModel from './leagues'
+import LeadsModel from './leads'
+import EncountersModel from './encounters'
 
 const environment = process.env.NODE_ENV || 'development'
 const config = allConfigs[environment]
@@ -24,7 +24,7 @@ Leads.belongsTo(Leagues, { foreignKey: 'leagueSlug' })
 Leagues.hasMany(Encounters, { foreignKey: 'leagueSlug' })
 Encounters.belongsTo(Leagues, { foreignKey: 'leagueSlug' })
 
-module.exports = {
+export default {
   Leagues,
   Leads,
   Encounters,

@@ -1,6 +1,7 @@
-const models = require('../models')
+import models from '../models'
 
-const deleteEncounter = async (request, response) => {
+// eslint-disable-next-line import/prefer-default-export
+export const deleteEncounter = async (request, response) => {
   try {
     const { id } = request.params
 
@@ -15,5 +16,3 @@ const deleteEncounter = async (request, response) => {
     return response.status(500).send('Unknown error while deleting encounter, please try again.')
   }
 }
-
-module.exports = { deleteEncounter }

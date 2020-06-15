@@ -1,7 +1,8 @@
-const Sequelize = require('sequelize')
-const models = require('../models')
+import Sequelize from 'sequelize'
+import models from '../models'
 
-const getAllLeagues = async (request, response) => {
+// eslint-disable-next-line import/prefer-default-export
+export const getAllLeagues = async (request, response) => {
   try {
     const leagues = await models.Leagues.findAll()
 
@@ -10,5 +11,3 @@ const getAllLeagues = async (request, response) => {
     return response.status(500).send('Unknown error finding leagues')
   }
 }
-
-module.exports = { getAllLeagues }

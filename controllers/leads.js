@@ -1,17 +1,17 @@
-const models = require('../models')
+import models from '../models'
 
-const getAllLeads = async (request, response) => {
+export const getAllLeads = async (request, response) => {
   const { leagueSlug } = request.params
 
   const leads = await models.Leads.findAll({
     where: { leagueSlug },
-    attributes: ['name']
+    attributes: ['name', 'slug']
   })
 
   return response.send(leads)
 }
 
-const getLeadEncountersBySlug = async (request, response) => {
+export const getLeadEncountersBySlug = async (request, response) => {
   try {
     const { leagueSlug, slug } = request.params
 
@@ -22,7 +22,7 @@ const getLeadEncountersBySlug = async (request, response) => {
           { slug }
         ],
       },
-      attributes: ['name'],
+      attributes: ['name', 'slug'],
       include: [{
         model: models.Encounters,
         where: { leagueSlug },
@@ -38,7 +38,7 @@ const getLeadEncountersBySlug = async (request, response) => {
   }
 }
 
-const saveNewEncounter = async (request, response) => {
+export const saveNewEncounter = async (request, response) => {
   try {
     const { leagueSlug } = request.params
     const { name, slug, rating } = request.body
@@ -61,5 +61,3 @@ const saveNewEncounter = async (request, response) => {
     return response.status(500).send('Unknown error saving lead. Please try again.')
   }
 }
-
-module.exports = { getAllLeads, getLeadEncountersBySlug, saveNewEncounter }
