@@ -1,0 +1,63 @@
+a:link {
+  color: cyan;
+}
+
+a:visited {
+  color: darkgoldenrod;
+}
+
+a:hover {
+  color: yellow;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #26282b;   
+}
+
+code {
+  display: block;
+  font-size: 14px;
+  white-space: pre-wrap;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 1.6;
+}
+
+
+div {
+  padding-top: 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+h1 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  border-bottom: solid 1px #ddd;
+  font-weight: 300;
+}
+
+.delete {
+  color: red;
+  font-weight: bold;
+}
+
+.desc {
+  text-decoration: underline;
+}
+
+.doctitle {
+  font-size: 32px;
+}
+
+.get {
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+.post {
+  color: #ffb10a;
+  font-weight: bold;
+}
